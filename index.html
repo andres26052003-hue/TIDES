@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIDES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <video class="background-video" autoplay muted loop playsinline>
+    <source src="assets/videos/mar.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay"></div>
+
+  <section class="scene active" id="intro">
+    <div class="content intro-content">
+      <p class="eyebrow">PROJECT</p>
+      <h1>TIDES</h1>
+      <p class="main-text">
+        Hay historias que comienzan mucho antes de que alguien las descubra.
+      </p>
+      <button id="startBtn">Comenzar</button>
+    </div>
+  </section>
+
+  <section class="scene" id="ready">
+    <div class="content chapter-card">
+      <p class="eyebrow">ANTES DE EMPEZAR</p>
+      <h2>¿Estás lista?</h2>
+      <p class="main-text">A partir de aquí, nada aparece por casualidad.</p>
+      <button id="readyBtn">Empieza esta historia</button>
+    </div>
+  </section>
+
+  <section class="scene map-scene" id="map">
+    <button class="back-home" id="backToIntro">←</button>
+    <button class="music-btn">♫</button>
+
+    <div class="map-wrapper">
+      <header class="brand-header">
+        <h1>TIDES</h1>
+        <p>Tu historia</p>
+      </header>
+
+      <div class="progress-area">
+        <span>PROGRESO</span>
+        <div class="progress-row">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <strong>20%</strong>
+        </div>
+      </div>
+
+      <header class="map-header">
+        <h2>MAPA DE CAPÍTULOS</h2>
+        <div class="divider">— 〰 —</div>
+        <p>Cada capítulo es una parte de nuestra historia.</p>
+      </header>
+
+      <div class="chapter-grid">
+
+        <article class="chapter-tile completed large" data-target="chapter0">
+          <span class="chapter-number">01</span>
+          <div class="chapter-icon">〰</div>
+          <p>CAPÍTULO 0</p>
+          <h3>La Playa</h3>
+          <button>Disponible ✓</button>
+        </article>
+
+        <article class="chapter-tile locked large">
+          <span class="chapter-number">02</span>
+          <div class="chapter-icon">🔒</div>
+          <p>CAPÍTULO 1</p>
+          <h3>Lo que empezó</h3>
+          <span>Aún no disponible</span>
+        </article>
+
+        <article class="chapter-tile locked">
+          <span class="chapter-number">03</span>
+          <div class="chapter-icon">🔒</div>
+          <p>CAPÍTULO 2</p>
+          <h3>Cumpleaños</h3>
+          <span>Aún no disponible</span>
+        </article>
+
+        <article class="chapter-tile locked">
+          <span class="chapter-number">04</span>
+          <div class="chapter-icon">🔒</div>
+          <p>CAPÍTULO 3</p>
+          <h3>Regreso</h3>
+          <span>Aún no disponible</span>
+        </article>
+
+        <article class="chapter-tile locked">
+          <span class="chapter-number">05</span>
+          <div class="chapter-icon">🔒</div>
+          <p>ARCHIVO</p>
+          <h3>Historia</h3>
+          <span>Aún no disponible</span>
+        </article>
+
+      </div>
+
+      <p class="map-footer">
+        Lo mejor aún está por descubrirse.
+        <strong>Sigue explorando.</strong>
+      </p>
+
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <span>〰</span>
+          <p>CAPÍTULOS</p>
+        </div>
+        <div class="nav-item">
+          <span>◇</span>
+          <p>EXPLORAR</p>
+        </div>
+        <div class="nav-item">
+          <span>▱</span>
+          <p>DIARIO</p>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <section class="scene" id="chapter0">
+    <div class="content chapter-card">
+      <p class="eyebrow">CAPÍTULO 0</p>
+      <h2>La Playa</h2>
+      <p class="main-text">
+        El primer capítulo no empieza con un regalo.
+        Empieza con recuerdos que parecen haber estado esperando.
+      </p>
+
+      <div class="button-row">
+        <button id="openBoardBtn">Ver recuerdos</button>
+        <button id="continueBtn">Volver al mapa</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene board-scene" id="beachBoard">
+    <button class="back-home" id="backToChapter">←</button>
+    <button class="music-btn">♫</button>
+
+    <div class="sunset-sky">
+      <div class="sun"></div>
+      <div class="palm palm-left"></div>
+      <div class="palm palm-right"></div>
+      <div class="ocean"></div>
+      <div class="sand"></div>
+    </div>
+
+    <div class="board-title">
+      <p>CAPÍTULO 0</p>
+      <h2>La Playa</h2>
+      <span>Toca cada recuerdo para abrirlo.</span>
+    </div>
+
+    <div class="memory-wall">
+
+      <div class="light-string string-1"></div>
+      <div class="light-string string-2"></div>
+      <div class="light-string string-3"></div>
+
+      <div class="polaroid media-card p1" data-img="assets/playa/foto1.jpg">
+        <i></i><img src="assets/playa/foto1.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p2" data-img="assets/playa/foto2.jpg">
+        <i></i><img src="assets/playa/foto2.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p3 video-polaroid" data-video="assets/playa/video1.mp4">
+        <i></i><video src="assets/playa/video1.mp4" muted playsinline></video>
+        <div class="play-badge">▶</div>
+      </div>
+
+      <div class="polaroid media-card p4" data-img="assets/playa/foto3.jpg">
+        <i></i><img src="assets/playa/foto3.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p5" data-img="assets/playa/foto4.jpg">
+        <i></i><img src="assets/playa/foto4.jpg" alt="">
+      </div>
+
+      <div class="note-card note1">
+        <i></i>
+        <p>No todo lo importante se planea.</p>
+      </div>
+
+      <div class="polaroid media-card p6 video-polaroid" data-video="assets/playa/video2.mp4">
+        <i></i><video src="assets/playa/video2.mp4" muted playsinline></video>
+        <div class="play-badge">▶</div>
+      </div>
+
+      <div class="polaroid media-card p7" data-img="assets/playa/foto5.jpg">
+        <i></i><img src="assets/playa/foto5.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p8" data-img="assets/playa/foto6.jpg">
+        <i></i><img src="assets/playa/foto6.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p9 video-polaroid" data-video="assets/playa/video3.mp4">
+        <i></i><video src="assets/playa/video3.mp4" muted playsinline></video>
+        <div class="play-badge">▶</div>
+      </div>
+
+      <div class="note-card note2">
+        <i></i>
+        <p>Esto es solo el comienzo.</p>
+      </div>
+
+    </div>
+
+    <div class="board-actions">
+      <button id="boardToMap">Volver al mapa</button>
+    </div>
+  </section>
+
+  <div class="media-modal" id="mediaModal">
+    <div class="modal-bg"></div>
+    <img id="modalImage" src="" alt="">
+    <video id="modalVideo" controls playsinline></video>
+    <button id="closeModal">×</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
