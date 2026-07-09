@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIDES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <video class="background-video" id="bgVideo" autoplay muted loop playsinline preload="auto">
+    <source src="assets/videos/mar.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay"></div>
+
+  <section class="scene active intro-mobile" id="intro">
+  <div class="intro-background"></div>
+  <div class="intro-warm-overlay"></div>
+
+  <div class="intro-app-content">
+    <div class="wave-logo">≋</div>
+
+    <h1>TIDES</h1>
+
+    <p>
+      Nuestras aventuras,<br>
+      nuestras mareas,<br>
+      nuestra historia.
+    </p>
+
+    <button id="startBtn">Comenzar</button>
+
+    <div class="scroll-hint">⌄</div>
+  </div>
+</section>
+
+  <section class="scene" id="ready">
+    <div class="content chapter-card">
+      <p class="eyebrow">ANTES DE EMPEZAR</p>
+      <h2>¿Estás lista?</h2>
+      <p class="main-text">No sabía cómo guardar todo lo que siento por ti en una sola carta.<br>
+        Así que hice un lugar entero para nosotros.<br>
+      Esta historia existe por ti ❤️
+    </p>
+
+      <button id="readyBtn">Empieza esta historia</button>
+    </div>
+  </section>
+
+  <section class="scene map-scene" id="map">
+    <button class="back-home" id="backToIntro">←</button>
+    <button class="music-btn">♫</button>
+
+    <div class="map-wrapper">
+      <header class="brand-header">
+        <h1>TIDES</h1>
+        <p>Nuestra historia</p>
+      </header>
+
+      <div class="progress-area">
+        <span>PROGRESO</span>
+        <div class="progress-row">
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+          <strong>20%</strong>
+        </div>
+      </div>
+
+      <header class="map-header">
+        <h2>MAPA DE CAPÍTULOS</h2>
+        <div class="divider">— 〰 —</div>
+        <p>Cada capítulo es una parte de nuestra historia.</p>
+      </header>
+
+      <div class="chapter-grid" id="chaptersGrid"></div>
+
+      <p class="map-footer">
+        Lo mejor aún está por descubrirse.
+        <strong>Sigue explorando.</strong>
+      </p>
+
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <span>〰</span>
+          <p>CAPÍTULOS</p>
+        </div>
+        <div class="nav-item">
+          <span>◇</span>
+          <p>EXPLORAR</p>
+        </div>
+        <div class="nav-item">
+          <span>▱</span>
+          <p>DIARIO</p>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <section class="scene" id="chapter1">
+    <div class="content chapter-card">
+      <p class="eyebrow">CAPÍTULO 1</p>
+      <h2>La Playa</h2>
+      <p class="main-text">
+        Dicen que el mar siempre encuentra la forma de volver a la orilla. Creo que nuestros recuerdos también.<br>
+Por eso este lugar existe.<br>
+Para que cada ola, cada atardecer y cada momento contigo nunca dejen de regresar...
+      </p>
+
+      <div class="button-row">
+        <button id="openBoardBtn">Ver recuerdos</button>
+        <button id="continueBtn">Volver al mapa</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene board-scene" id="beachBoard">
+    <button class="back-home" id="backToChapter">←</button>
+    <button class="music-btn">♫</button>
+
+    <div class="board-title">
+      <p>CAPÍTULO 1</p>
+      <h2>La Playa</h2>
+      <span>Toca cada recuerdo para abrirlo.</span>
+    </div>
+
+    <div class="beach-letter-modal" id="beachLetterModal">
+  <div class="beach-letter-bg"></div>
+  <img id="beachLetterImage" src="" alt="Carta de la playa">
+  <button id="closeBeachLetter">×</button>
+</div>
+
+    <div class="memory-wall">
+      <div class="light-string string-1"></div>
+      <div class="light-string string-2"></div>
+      <div class="light-string string-3"></div>
+
+      <div class="polaroid media-card p1" data-img="assets/playa/foto1.jpg">
+        <i></i><img src="assets/playa/foto1.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p2" data-img="assets/playa/foto2.jpg">
+        <i></i><img src="assets/playa/foto2.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p3 video-polaroid" data-video="assets/playa/video1.mp4">
+        <i></i><video src="assets/playa/video1.mp4" muted playsinline></video>
+        <div class="play-badge">▶️</div>
+      </div>
+
+      <div class="polaroid media-card p4" data-img="assets/playa/foto3.jpg">
+        <i></i><img src="assets/playa/foto3.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p5" data-img="assets/playa/foto4.jpg">
+        <i></i><img src="assets/playa/foto4.jpg" alt="">
+      </div>
+
+      <div class="note-card note1">
+        <i></i>
+        <p>No todo lo importante se planea.</p>
+      </div>
+
+      <div class="polaroid media-card p6 video-polaroid" data-video="assets/playa/video2.mp4">
+        <i></i><video src="assets/playa/video2.mp4" muted playsinline></video>
+        <div class="play-badge">▶️</div>
+      </div>
+
+      <div class="polaroid media-card p7" data-img="assets/playa/foto5.jpg">
+        <i></i><img src="assets/playa/foto5.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p8" data-img="assets/playa/foto6.jpg">
+        <i></i><img src="assets/playa/foto6.jpg" alt="">
+      </div>
+
+      <div class="polaroid media-card p9 video-polaroid" data-video="assets/playa/video3.mp4">
+        <i></i><video src="assets/playa/video3.mp4" muted playsinline></video>
+        <div class="play-badge">▶️</div>
+      </div>
+
+      <div class="note-card note2">
+        <i></i>
+        <p>Esto es solo el comienzo.</p>
+      </div>
+    </div>
+<button class="beach-letter-btn" id="beachLetterBtn">
+  ✉️
+</button>
+
+    <div class="board-actions">
+      <button id="boardToMap">Volver al mapa</button>
+    </div>
+  </section>
+
+  <section class="scene prologue-scene" id="prologue">
+    <button class="back-home" id="prologueBack">←</button>
+
+    <div class="prologue-stage">
+
+      <div class="prologue-header">
+        <p>PRÓLOGO</p>
+        <h2>La Primera Carta</h2>
+        <span>Antes de mostrar los capítulos, hay algo que quiero que leas.</span>
+      </div>
+
+      <div class="chest-scene">
+        <div class="moon-glow"></div>
+
+        <div class="treasure-chest">
+          <div class="chest-lid"></div>
+          <div class="chest-body"></div>
+
+ <button class="treasure-object obj-letter prologue-option" data-img="assets/prologo/carta-1.jpg">✉️</button>
+
+<button class="treasure-object obj-compass prologue-option" data-img="assets/prologo/carta-2.jpg">🧭</button>
+
+<button class="treasure-object obj-scroll prologue-option" data-img="assets/prologo/carta-3.jpg">📜</button>
+
+<button class="treasure-object obj-shell prologue-option" data-img="assets/prologo/carta-4.jpg">🐚</button>
+        </div>
+
+        <p class="tap-hint">Toca un objeto del cofre</p>
+      </div>
+
+      <button id="startStoryFromPrologue" class="start-journey">
+        Ir al mapa de mareas 〰
+      </button>
+
+    </div>
+  </section>
+
+<div class="prologue-image-modal" id="prologueImageModal">
+  <div class="prologue-image-bg"></div>
+  <img id="prologueImage" src="" alt="Carta del prólogo">
+  <button id="closePrologueImage">×</button>
+</div>
+
+  <div class="media-modal" id="mediaModal">
+    <div class="modal-bg"></div>
+    <img id="modalImage" src="" alt="">
+    <video id="modalVideo" controls playsinline></video>
+    <button id="closeModal">×</button>
+  </div>
+
+  <script src="chapters.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
